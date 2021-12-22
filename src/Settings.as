@@ -18,19 +18,19 @@ bool Setting_HideInMainMenu = false;
 [Setting category="Appearence" name="Use default colors" description="Disable to use the colors chosen below"]
 bool Setting_UseDefaultColors = true;
 
-[Setting category="Appearence" name="Widget color"]
+[Setting category="Appearence" name="Widget color" color]
 vec4 Setting_WidgetBackgroundColor = vec4(0, 0, 0, 0.7f);
 
-[Setting category="Appearence" name="Widget border color"]
+[Setting category="Appearence" name="Widget border color" color]
 vec4 Setting_WidgetBorderColor = vec4(0, 0, 0, 0.7f);
 
-[Setting category="Appearence" name="Text color"]
+[Setting category="Appearence" name="Text color" color]
 vec4 Setting_TextColor = vec4(1, 1, 1, 1);
 
 
 
 [Setting category="Time Format" name="Use UTC time"]
-string Setting_UseUtcTime = false;
+bool Setting_UseUtcTime = false;
 
 [Setting category="Time Format" name="Format" description="All time format specifications here: https://www.php.net/manual/en/function.strftime.php"]
 string Setting_TimeFormat = "%T";

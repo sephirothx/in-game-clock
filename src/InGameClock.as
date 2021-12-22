@@ -13,8 +13,8 @@ void Render() {
 
   RenderTime();
 
-  ResetStyle();
   UI::End();
+  ResetStyle();
 }
 
 void RenderTime() {
@@ -37,10 +37,10 @@ bool ShouldHideWidget() {
 }
 
 int GetWindowFlags() {
-  ret = UI::WindowFlags::NoTitleBar |
-        UI::WindowFlags::NoCollapse |
-        UI::WindowFlags::AlwaysAutoResize |
-        UI::WindowFlags::NoDocking;
+  auto ret = UI::WindowFlags::NoTitleBar |
+             UI::WindowFlags::NoCollapse |
+             UI::WindowFlags::AlwaysAutoResize |
+             UI::WindowFlags::NoDocking;
 
   if (Setting_LockPosition) {
     ret |= UI::WindowFlags::NoMove;
