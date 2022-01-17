@@ -12,6 +12,9 @@ bool Setting_HideInMainMenu = false;
 
 
 
+[Setting category="Appearence" name="Font size" min=16 max=72]
+int Setting_FontSize = 16;
+
 [Setting category="Appearence" name="Use default colors" description="Disable to use the colors chosen below"]
 bool Setting_UseDefaultColors = true;
 

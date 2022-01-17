@@ -1,3 +1,5 @@
+Resources::Font@ g_Font = Resources::GetFont("DroidSans.ttf", Setting_FontSize);
+
 void Render() {
   if (ShouldHideWidget()) return;
 
@@ -17,11 +19,19 @@ void Render() {
   ResetStyle();
 }
 
+void OnSettingsChanged() {
+  @g_Font = Resources::GetFont("DroidSans.ttf", Setting_FontSize);
+}
+
 void RenderTime() {
+  UI::PushFont(g_Font);
+
   string t = Setting_UseUtcTime
     ? Time::FormatStringUTC(Setting_TimeFormat)
     : Time::FormatString(Setting_TimeFormat);
   UI::Text(t);
+
+  UI::PopFont();
 }
 
 bool ShouldHideWidget() {
