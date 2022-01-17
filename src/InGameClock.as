@@ -25,14 +25,11 @@ void RenderTime() {
 }
 
 bool ShouldHideWidget() {
-  auto app = GetApp();
-  auto playground = app.CurrentPlayground;
+  auto playground = GetApp().CurrentPlayground;
 
-  bool hidden_interface = playground !is null && playground.Interface !is null && Dev::GetOffsetUint32(playground.Interface, 0x1C) == 0;
   bool is_introsequence = playground !is null && playground.UIConfigs.Length > 0 && playground.UIConfigs[0].UISequence == CGamePlaygroundUIConfig::EUISequence::Intro;
 
-  return Setting_HideWithInterface && hidden_interface ||
-         Setting_HideInIntroSequence && is_introsequence ||
+  return Setting_HideInIntroSequence && is_introsequence ||
          Setting_HideInMainMenu && playground is null;
 }
 

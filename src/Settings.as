@@ -4,9 +4,6 @@ bool Setting_LockPosition = false;
 [Setting category="General" name="Widget position"]
 vec2 Setting_Position = vec2(0, 24);
 
-[Setting category="General" name="Hide with interface"]
-bool Setting_HideWithInterface = true;
-
 [Setting category="General" name="Hide during intro sequence"]
 bool Setting_HideInIntroSequence = true;
 
